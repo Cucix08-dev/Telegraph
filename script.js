@@ -15,3 +15,12 @@ else{
     browserTitle.textContent = `Telegraph 4AI`
     titlePage.textContent = `Telegraph 4AI`;
 }
+
+function dayLocation(dayWeek) {
+    window.location.href = `pages/orario/${dayWeek}.html`;
+}
+
+const main = document.getElementById("main-container");
+const header = document.getElementById("header-container");
+
+main.style.marginTop = 48 + header.offsetHeight + "px";

@@ -8,16 +8,89 @@
 </head>
 <body>
     
-    <header>
+    <header id="header-container">
         <h1 id="title-page"></h1>
         <nav>
             <ul>
-                <li class="nav-button">Orario</li>
+                <li class="nav-button"><a href="#orario">Orario</a></li>
+                <li class="nav-button"><a href="#verifiche">Verifiche</a></li>
+                <li class="nav-button"><a href="#link">Link</a></li>
             </ul>
         </nav>
     </header>
 
-    
+    <main id="main-container">
+        <section id="orario">
+            <h2 class="title-section">Orario Scolastico</h2>
+
+            <div class="buttons-group">
+                <button class="day-buttons" onclick="dayLocation('lunedi')">Lunedì</button>
+                <button class="day-buttons" onclick="dayLocation('martedi')">Martedì</button>
+                <button class="day-buttons" onclick="dayLocation('mercoledi')">Mercoledì</button>
+                <button class="day-buttons" onclick="dayLocation('giovedi')">Giovedì</button>
+                <button class="day-buttons" onclick="dayLocation('venerdi')">Venerdì</button>
+            </div>
+            
+        </section>
+
+        <hr>
+
+        <section id="moduli">
+            <h2 class="title-section">Moduli da compilare</h2>
+
+            <p>
+                Nessuno
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="verifiche">
+            <h2 class="title-section">Verifiche</h2>
+
+            <div class="buttons-group">
+                <button class="test-buttons">Orali</button>
+                <button class="test-buttons">Scritte</button>
+                <button class="test-buttons">Per DSA</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="compiti">
+            <h2 class="title-section">Compiti</h2>
+
+            
+        </section>
+
+        <hr>
+
+        <section id="link">
+            <h2 class="title-section">Link</h2>
+
+            <div class="buttons-group">
+                <button class="link-buttons">Contatti Scuola</button>
+                <button class="link-buttons">F.A.Q.</button>
+                <button class="link-buttons">Costituzione</button>
+                <button class="link-buttons">Memoriale</button>
+            </div>
+        
+        </section>
+
+        <hr>
+
+        <section id="progetti">
+            <h2 class="title-section">Progetti</h2>
+            
+            <div class="buttons-group">
+                <button class="project-buttons">Notizie Belliche</button>
+                <button class="project-buttons">Github Peppe</button>
+                <button class="project-buttons">Github Cucix</button>
+                <button class="project-buttons">Bot di Telegram</button>
+                <button class="project-buttons">Cucix Portfolio</button>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

@@ -1,17 +1,98 @@
+@font-face {
+    font-family: 'School Font';
+    src: url("School Font.ttf");
+}
+
 body{
     padding: 0;
     margin: 0;
     width: 100vw;
+    font-family: 'School Font';
 }
+
+/* HEADER */
 
 header{
     display: flex;
+    width: inherit;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 2px solid grey;
+    background-color: white;
+    position: fixed;
+    top: 0;
 }
 
-ul{list-style: none;display: flex;}
+#title-page{
+    margin-left: 2.5vw;
+    font-size: clamp(1.75rem,4vw,3rem);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    margin-right: 2.5vw;
+}
 
 li.nav-button{
-    padding: 32px 48px;
+    transition: all ease 0.5s;
+}
+
+li.nav-button a{
+    text-decoration: none;
+    font-size: clamp(1.5rem,2vw,2rem);
+    color: inherit;
+    padding: 2vw 2.5vw;
+    margin: 0 1vw;
+    border-radius: 20px;
+    transition: background-color ease 0.4s;
+}
+
+li.nav-button a:hover{
+    background-color: rgba(180, 180, 180, 0.475);
+}
+
+/* MAIN */
+section{
+    margin: 5vw 2.5vw;
+}
+
+.title-section{
+    font-size: clamp(1.5rem,3vw,2rem);
+}
+
+div.buttons-group{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+button{
+    width: 200px;
+    aspect-ratio: 16/5;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2vw 2.5vw;
+    margin: 1vw;
+    box-shadow: 4px 4px 8px black;
+    cursor: pointer;
+    font-size: clamp(1rem,2vw,1.5rem);
+    transition: transform ease 0.25s, filter ease 0.25s;
+    font-family: inherit;
+}
+
+button.day-buttons:hover{
+    transform: scale(1.1);
+}
+
+button.test-buttons:hover{
+    transform:translateY(-6px);
+}
+
+button.link-buttons:hover{
+    filter: brightness(3);
+}
+
+button.project-buttons:hover{
+    filter:invert();
 }
