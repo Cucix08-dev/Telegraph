@@ -6,8 +6,6 @@ main.addEventListener("click", () => {
     dMenu.style.display = "none"
 });
 
-
-
 groupNavButtons.addEventListener("click", () => {
     visible = !visible;
     dMenu.style.display =  visible? "block":"none";

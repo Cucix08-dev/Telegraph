@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="browser-title-page"></title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    
+    <header id="header-container">
+        <h1 id="title-page"></h1>
+
+        <nav>
+            <ul>
+                <li class="nav-buttons" id="home">
+                    <svg width="48" height="48" viewBox="0 0 32 32"
+                        fill="none" xmlns="http://www.w3.org/2000/svg"
+                        stroke="black" stroke-width="2" stroke-linejoin="round">
+                        
+                        <polygon points="4,14 16,4 28,14" fill="white"/>
+                        <rect x="8" y="14" width="16" height="14" fill="white"/>
+                        <rect x="14" y="20" width="4" height="8" fill="white"/>
+                    </svg>
+                    <h3 id="homeText">Home</h3>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-container">
+        <section id="orario">
+            <h2 class="title-section">Interrogazioni scritte</h2>
+
+            <div id="interrogazioni">
+                Non inserite.
+            </div>
+
+            <div id="navigation-arrows">
+                <button class="arrow-buttons" onclick="linkPage('orali.html')"><<</button>
+                <button class="arrow-buttons" onclick="linkPage('dsa.html')">>></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

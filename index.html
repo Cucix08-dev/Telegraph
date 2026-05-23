@@ -32,7 +32,7 @@
     </header>
 
     <main id="main-container">
-        <section id="orario">
+        <section id="orario" class="section-container">
             <h2 class="title-section">Orario Scolastico</h2>
 
             <div class="buttons-group">
@@ -47,7 +47,7 @@
 
         <hr>
 
-        <section id="moduli">
+        <section id="moduli" class="section-container">
             <h2 class="title-section">Moduli da compilare</h2>
 
             <p>
@@ -57,19 +57,19 @@
 
         <hr>
 
-        <section id="verifiche">
+        <section id="verifiche" class="section-container">
             <h2 class="title-section">Verifiche</h2>
 
             <div class="buttons-group">
-                <button class="test-buttons">Orali</button>
-                <button class="test-buttons">Scritte</button>
-                <button class="test-buttons">Per DSA</button>
+                <button class="test-buttons" onclick="linkPage('pages/verifiche/orali.html')">Orali</button>
+                <button class="test-buttons" onclick="linkPage('pages/verifiche/scritte.html')">Scritte</button>
+                <button class="test-buttons" onclick="linkPage('pages/verifiche/dsa.html')">Per DSA</button>
             </div>
         </section>
 
         <hr>
 
-        <section id="compiti">
+        <section id="compiti" class="section-container">
             <h2 class="title-section">Compiti</h2>
 
             <p>
@@ -79,21 +79,21 @@
 
         <hr>
 
-        <section id="link">
+        <section id="link" class="section-container">
             <h2 class="title-section">Link</h2>
 
             <div class="buttons-group">
-                <button class="link-buttons">Contatti Scuola</button>
-                <button class="link-buttons">F.A.Q.</button>
-                <button class="link-buttons">Costituzione</button>
-                <button class="link-buttons">Memoriale</button>
+                <button class="link-buttons" onclick="linkPage('pages/linkUtili/contattiScuola.html')">Contatti Scuola</button>
+                <button class="link-buttons" onclick="linkPage('pages/linkUtili/faq.html')">F.A.Q.</button>
+                <button class="link-buttons" onclick="linkPage('pages/linkUtili/costituzione.html')">Costituzione</button>
+                <button class="link-buttons" onclick="linkPage('pages/linkUtili/memoriale.html')">Memoriale</button>
             </div>
         
         </section>
 
         <hr>
 
-        <section id="progetti">
+        <section id="progetti" class="section-container">
             <h2 class="title-section">Progetti</h2>
             
             <div class="buttons-group">
@@ -105,7 +105,8 @@
             </div>
         </section>
     </main>
-
+    <script src="observer.js"></script>
+    <script src="index.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

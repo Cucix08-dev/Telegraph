@@ -1,0 +1,23 @@
+#home{
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    padding: 2vw 2.5vw;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color ease 0.3s;
+}
+
+#home:hover{
+    background-color: rgba(180, 180, 180, 0.475);
+}
+
+#homeText{
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+@media (max-width:540px){
+    #homeText{
+        display: none;
+    }
+}

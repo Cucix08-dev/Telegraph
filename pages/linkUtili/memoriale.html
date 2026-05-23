@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="browser-title-page"></title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container-memoriali{
+            width: 30vw;
+            border-radius: 20px;
+            padding: 20px;
+            border: solid 2px;
+            margin: 20px 20px 20px 0;
+        }
+
+        #cambio-indirizzo{
+            background-color: rgba(4, 234, 246, 0.194);
+            border-color: rgba(4, 234, 246, 0.709);
+        }
+
+        #bocciati-primo{
+            background-color: rgba(207, 0, 0, 0.534);
+            border-color: rgb(128, 0, 0);
+        }
+
+        #bocciati-secondo{
+            background-color: rgba(207, 0, 0, 0.384);
+            border-color: rgb(128, 0, 0);
+        }
+
+        #bocciati-terzo{
+            background-color: rgba(207, 0, 0, 0.279);
+            border-color: rgb(128, 0, 0);
+        }
+
+        #link-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    </style>
+</head>
+<body>
+    
+    <header id="header-container">
+        <h1 id="title-page"></h1>
+
+        <nav>
+            <ul>
+                <li class="nav-buttons" id="home">
+                    <svg width="48" height="48" viewBox="0 0 32 32"
+                        fill="none" xmlns="http://www.w3.org/2000/svg"
+                        stroke="black" stroke-width="2" stroke-linejoin="round">
+                        
+                        <polygon points="4,14 16,4 28,14" fill="white"/>
+                        <rect x="8" y="14" width="16" height="14" fill="white"/>
+                        <rect x="14" y="20" width="4" height="8" fill="white"/>
+                    </svg>
+                    <h3 id="homeText">Home</h3>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-container">
+        <section id="orario">
+            <h2 class="title-section">Memoriale</h2>
+
+            <div id="link-container">
+                <div class="container-memoriali" id="cambio-indirizzo">
+                    <h3>Cambio Indirizzo</h3>
+                    <p>
+                        Diego C. <br>
+                        Daniele C. <br>
+                        Alessandro A. <br>
+                        Gianluca <br>
+                        Cubito A. Che è andato al serale
+                    </p>
+                </div>
+
+                <div class="container-memoriali" id="bocciati-primo">
+                    <h3>Bocciati in primo</h3>
+                    <p>
+                        Alessio T.
+                    </p>
+                </div>
+
+                <div class="container-memoriali" id="bocciati-secondo">
+                    <h3>Bocciati in secondo</h3>
+                    <p>
+                        Angelo S. <br>
+                        Leonardo D.B. <br>
+                        Marco L. <br>
+                        David P. <br>
+                        Gabriel C. <br>
+                        Luciano C.
+                    </p>
+                </div>
+
+                <div class="container-memoriali" id="bocciati-terzo">
+                    <h3>Bocciati in terzo</h3>
+                    <p>
+                        Emiliano C. <br>
+                        Christian G. <br>
+                        Christian D'A. <br>
+                        Mattia D.S. <br>
+                        Samuele Gi. <br>
+                        Samuele Carmelo I. <br>
+                        Salvatore N. <br>
+                        Giulia F.
+                    </p>
+                </div>
+            </div>
+
+            <div id="navigation-arrows">
+                <button class="arrow-buttons" onclick="linkPage('costituzione.html')"><<</button>
+                <button class="arrow-buttons" onclick="linkPage('contattiScuola.html')">>></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../script.js"></script>
+    <script src="observer.js"></script>
+</body>
+</html>
