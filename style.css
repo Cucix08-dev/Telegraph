@@ -34,7 +34,6 @@ ul{
     list-style: none;
     display: flex;
     align-items: center;
-    margin-right: 2.5vw;
 }
 
 li.nav-button{
