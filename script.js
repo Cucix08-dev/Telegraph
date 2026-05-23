@@ -20,7 +20,20 @@ function dayLocation(dayWeek) {
     window.location.href = `pages/orario/${dayWeek}.html`;
 }
 
+function linkPage(link) {
+    window.location.href = `${link}`;
+}
+
 const main = document.getElementById("main-container");
 const header = document.getElementById("header-container");
+const body = document.body;
 
 main.style.marginTop = 48 + header.offsetHeight + "px";
+
+const navButtons = document.querySelectorAll(".nav-buttons");
+navButtons.forEach(element => {
+    element.addEventListener("click", () => {
+        body.scrollTop -= header.offsetHeight;
+    });
+});
+

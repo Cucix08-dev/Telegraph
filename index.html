@@ -12,9 +12,9 @@
         <h1 id="title-page"></h1>
         <nav>
             <ul>
-                <li class="nav-button"><a href="#orario">Orario</a></li>
-                <li class="nav-button"><a href="#verifiche">Verifiche</a></li>
-                <li class="nav-button"><a href="#link">Link</a></li>
+                <li class="nav-button" id="orarioNavButton"><a href="#orario">Orario</a></li>
+                <li class="nav-button" id="verificheNavButton"><a href="#verifiche">Verifiche</a></li>
+                <li class="nav-button" id="linkNavButton"><a href="#link">Link</a></li>
             </ul>
         </nav>
     </header>
@@ -60,7 +60,9 @@
         <section id="compiti">
             <h2 class="title-section">Compiti</h2>
 
-            
+            <p>
+                Non inseriti.
+            </p>
         </section>
 
         <hr>
@@ -83,11 +85,11 @@
             <h2 class="title-section">Progetti</h2>
             
             <div class="buttons-group">
-                <button class="project-buttons">Notizie Belliche</button>
-                <button class="project-buttons">Github Peppe</button>
-                <button class="project-buttons">Github Cucix</button>
-                <button class="project-buttons">Bot di Telegram</button>
-                <button class="project-buttons">Cucix Portfolio</button>
+                <button class="project-buttons" onclick="linkPage('https://t.me/+fZf2OKp-STplNmI0');">Notizie Belliche</button>
+                <button class="project-buttons" onclick="linkPage('https://github.com/Giu27')">Github Peppe</button>
+                <button class="project-buttons" onclick="linkPage('https://github.com/Cucix08-dev')">Github Cucix</button>
+                <button class="project-buttons" onclick="linkPage('https://github.com/Giu27/SupergiuToolsBot')">Bot di Telegram</button>
+                <button class="project-buttons" onclick="linkPage('https://cucix-portfolio.vercel.app/')">Cucix Portfolio</button>
             </div>
         </section>
     </main>

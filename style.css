@@ -20,6 +20,8 @@ header{
     border-bottom: 2px solid grey;
     background-color: white;
     position: fixed;
+    height: 10dvh;
+    padding: 16px 0;
     top: 0;
 }
 
@@ -54,7 +56,7 @@ li.nav-button a:hover{
 
 /* MAIN */
 section{
-    margin: 5vw 2.5vw;
+    margin: 4vw 2.5vw;
 }
 
 .title-section{
@@ -71,7 +73,7 @@ button{
     aspect-ratio: 16/5;
     background-color: white;
     border-radius: 20px;
-    padding: 2vw 2.5vw;
+    padding: min(1em,2vw) min(2em,2.5vw);
     margin: 1vw;
     box-shadow: 4px 4px 8px black;
     cursor: pointer;
