@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="browser-title-page"></title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header id="header-container">
+        <h1 id="title-page"></h1>
+
+        <nav>
+            <ul>
+                <li class="nav-buttons" id="home">
+                    <svg width="48" height="48" viewBox="0 0 32 32"
+                        fill="none" xmlns="http://www.w3.org/2000/svg"
+                        stroke="black" stroke-width="2" stroke-linejoin="round">
+                        
+                        <polygon points="4,14 16,4 28,14" fill="white"/>
+                        <rect x="8" y="14" width="16" height="14" fill="white"/>
+                        <rect x="14" y="20" width="4" height="8" fill="white"/>
+                    </svg>
+                    <h3 id="homeText">Home</h3>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-container">
+        <section id="orario">
+            <h2 class="title-section">Giovedì</h2>
+
+            <div class="orario-group">
+                <div class="ora">
+                    <div class="oraLezione">1</div>
+                    <div class="lezione">8:00 / 8:50 Educazione fisica (Ni.)</div>
+                </div>
+                <div class="ora">
+                    <div class="oraLezione">2</div>
+                    <div class="lezione">8:50 / 9:35  Educazione fisica (Ni.)</div>
+                </div>
+                <div class="ora">
+                    <div class="oraLezione">3</div>
+                    <div class="lezione">9:45 / 10:40 Matematica (Sp.)</div>
+                </div>
+                <div class="ora">
+                    <div class="oraLezione">4</div>
+                    <div class="lezione">10:40 / 11:35 Inglese (Ma.)</div>
+                </div>
+                <div class="ora">
+                    <div class="oraLezione">5</div>
+                    <div class="lezione">11:45 / 12:30 Sistemi e reti (Bo.)</div>
+                </div>
+                <div class="ora">
+                    <div class="oraLezione">6</div>
+                    <div class="lezione">12:30 / 13:20 Lettere (Pr.)</div>
+                </div>
+            </div>
+
+            <div id="navigation-arrows">
+                <button class="arrow-buttons" onclick="linkPage('mercoledi.html')"><<</button>
+                <button class="arrow-buttons" onclick="linkPage('venerdi.html')">>></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

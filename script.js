@@ -37,16 +37,7 @@ navButtons.forEach(element => {
     });
 });
 
-let visible = false;
-
-const groupNavButtons = document.getElementById("group-nav-buttons");
-const dMenu = document.getElementById("dropdown-menu");
-main.addEventListener("click", () => {
-    dMenu.style.display = "none"
+const homeButton = document.getElementById("home");
+homeButton.addEventListener("click", () => {
+    window.location.href = "../../index.html"
 });
-
-groupNavButtons.addEventListener("click", () => {
-    visible = !visible;
-    dMenu.style.display =  visible? "block":"none";
-});
-

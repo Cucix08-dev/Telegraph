@@ -1,0 +1,63 @@
+.ora{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.oraLezione{
+    border: 2px solid black;
+    max-width: 80px;
+    min-width: 40px;
+    width: 10vw;
+    aspect-ratio: 1/1;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#navigation-arrows{
+    display: flex;
+    gap: 20px;
+}
+
+div#navigation-arrows button{
+    width: 20vw;
+    aspect-ratio: 5/3;
+    transition: transform ease 0.3s;
+}
+
+div#navigation-arrows button:hover{
+    transform: scale(1.1);
+}
+
+.arrow-buttons{
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+#home{
+    margin-right: 32px;
+    display: flex;
+    align-items: center;
+    padding: 2vw 2.5vw;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color ease 0.3s;
+}
+
+#home:hover{
+    background-color: rgba(180, 180, 180, 0.475);
+}
+
+#homeText{
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+@media (max-width:540px){
+    #homeText{
+        display: none;
+    }
+}
