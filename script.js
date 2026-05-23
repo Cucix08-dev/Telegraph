@@ -25,19 +25,24 @@ function linkPage(link) {
 }
 
 const main = document.getElementById("main-container");
+
 const header = document.getElementById("header-container");
-const body = document.body;
-
 main.style.marginTop = 48 + header.offsetHeight + "px";
+const headerPadding = parseFloat(getComputedStyle(header).paddingTop);
+const fullHeaderSpace = header.offsetHeight + headerPadding * 2;
 
-const navButtons = document.querySelectorAll(".nav-buttons");
-navButtons.forEach(element => {
-    element.addEventListener("click", () => {
-        body.scrollTop -= header.offsetHeight;
+const navButtons = document.querySelectorAll(".nav-button a");
+
+navButtons.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault(); // blocca lo scroll automatico
+
+        const target = document.querySelector(link.getAttribute("href"));
+        const targetY = target.offsetTop - fullHeaderSpace;
+
+        document.documentElement.scrollTo({
+            top: targetY,
+            behavior: "smooth"
+        });
     });
-});
-
-const homeButton = document.getElementById("home");
-homeButton.addEventListener("click", () => {
-    window.location.href = "../../index.html"
 });
