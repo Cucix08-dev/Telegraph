@@ -33,6 +33,7 @@ header{
 ul{
     list-style: none;
     display: flex;
+    align-items: center;
     margin-right: 2.5vw;
 }
 
@@ -52,6 +53,34 @@ li.nav-button a{
 
 li.nav-button a:hover{
     background-color: rgba(180, 180, 180, 0.475);
+}
+
+#group-nav-buttons{
+    display: none;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+#dropdown-menu {
+    position: absolute;
+    top: 9dvh;
+    right: 0;
+    left: auto;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 8px;
+    z-index: 100;
+    min-width: 150px;
+    cursor: pointer;
+    display: none;
+    background-color: rgba(180, 180, 180, 0.475);
+    border: solid 2px black;
+}
+
+#dropdown-menu li {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 2px 0 !important;
 }
 
 /* MAIN */
@@ -87,7 +116,7 @@ button.day-buttons:hover{
 }
 
 button.test-buttons:hover{
-    transform:translateY(-6px);
+    transform:translateY(-8px);
 }
 
 button.link-buttons:hover{
@@ -96,4 +125,22 @@ button.link-buttons:hover{
 
 button.project-buttons:hover{
     filter:invert();
+}
+
+::selection{
+    background: transparent;
+}
+
+@media (max-width:540px){
+    li.nav-button{
+        display: none;
+    }
+    
+    #group-nav-buttons{
+        display: block;
+    }
+
+    #group-nav-buttons:hover{
+        background-color: rgba(180, 180, 180, 0.475);
+    }
 }
