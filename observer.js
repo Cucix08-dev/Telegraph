@@ -8,7 +8,7 @@ const observer = new IntersectionObserver((entries) => {
         }
     })
 }, {
-    rootMargin: "0px 0px -50px 50px"
+    rootMargin: "0px 0px -100px 50px"
 })
 
 const sections = document.querySelectorAll(".section-container");

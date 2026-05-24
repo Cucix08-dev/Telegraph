@@ -2,7 +2,7 @@
     margin-right: 32px;
     display: flex;
     align-items: center;
-    padding: 2vw 2.5vw;
+    padding: min(1em,2vw) 2.5vw;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color ease 0.3s;
@@ -13,7 +13,7 @@
 }
 
 #homeText{
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 1.75rem);
 }
 
 @media (max-width:540px){
