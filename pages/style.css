@@ -16,8 +16,23 @@
     font-size: clamp(1.5rem, 2vw, 1.75rem);
 }
 
+div#navigation-arrows{
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width:540px){
     #homeText{
         display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    #home:hover{
+        background-color: rgba(63, 63, 63, 0.475);
+    }
+
+    div#navigation-arrows button{
+        border: solid 1px white;
     }
 }
