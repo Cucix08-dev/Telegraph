@@ -7,7 +7,7 @@ const year = time.getFullYear();
 const browserTitle = document.getElementById("browser-title-page");
 const titlePage = document.getElementById("title-page");
 
-if ((year === 2026 && month >= 6) && day >= 10) {
+if (year >= 2026 && month >= 6) {
     browserTitle.textContent = `Telegraph 5AI`;
     titlePage.textContent = `Telegraph 5AI`;
 }
