@@ -35,7 +35,7 @@ const navButtons = document.querySelectorAll(".nav-button a");
 
 navButtons.forEach(link => {
     link.addEventListener("click", (e) => {
-        e.preventDefault(); // blocca lo scroll automatico
+        e.preventDefault();
 
         const target = document.querySelector(link.getAttribute("href"));
         const targetY = target.offsetTop - fullHeaderSpace;
