@@ -1,88 +1,122 @@
-const orari = {
-    "lunedi.html": [
-        "8:00 / 9:00 Italiano",
-        "9:00 / 9:55  Informatica - Lab",
-        "10:05 / 11:00 Informatica - Lab",
-        "11:00 / 11:55 Inglese"
-    ],
-    "martedi.html": [
-        "7:50 / 8:40 Informatica - Lab",
-        "8:40 / 9:25 TPSI - Lab",
-        "9:35 / 10:30 Sistemi e Reti",
-        "10:30 / 11:25 GPOI - Lab"
-    ],
-    "mercoledi.html": [
-        "8:00 / 8:50  GPOI",
-        "8:50 / 9:35  Matematica",
-        "9:45 / 10:40 Informatica",
-        "10:40 / 11:35 Sistemi e Reti"
-    ],
-    "giovedi.html": [
-        "8:00 / 8:50 Informatica - Lab",
-        "8:50 / 9:35  Lettere",
-        "9:45 / 10:40 Lettere",
-        "10:40 / 11:35 Inglese"
-    ],
-    "venerdi.html": [
-        "8:00 / 9:00 TPSI - Lab",
-        "9:00 / 9:55 TPSI - Lab",
-        "10:05 / 11:00 Lettere",
-        "11:00 / 11:55 Sistemi - Lab"
-    ]
-}
-
-const teachers = {
-    "TPSI" : "Cr.",
-    "TPSI - Lab" : "Cr. - Bi.",
-
-    "Sistemi - Lab": "Bo. - Mar.",
-    "Sistemi": "Bo.",
-
-    "Inglese": "Mal.",
-    "Lettere" : "Pr.",
-    "Matematica" : "Sp.",
-
-    "GPOI" : "Sch.",
-    "GPOI - Lab" : "Sch. - Mar.",
-
-    "Informatica" : "Mu.",
-    "Informatica - Lab" : "Mu. - Bi."
-    
-}
-
-const correntFile = window.location.pathname.split("/").pop();
-
 document.addEventListener("DOMContentLoaded", () => {
 
+    const orari = {
+        "lunedi.html": [
+            "Informatica",
+            "Informatica",
+            "TPSI - Lab",
+            "Lettere",
+            "Inglese",
+            "GPOI"
+        ],
+        "martedi.html": [
+            "Sistemi e reti - Lab",
+            "Sistemi e reti - Lab",
+            "TPSI - Lab",
+            "TPSI - Lab",
+            "Matematica",
+            "Matematica"
+        ],
+        "mercoledi.html": [
+            "Matematica",
+            "Informatica - Lab",
+            "Lettere",
+            "Lettere",
+            "Inglese",
+            "Sistemi e reti",
+            "Religione"
+        ],
+        "giovedi.html": [
+            "Informatica - Lab",
+            "Informatica - Lab",
+            "GPOI - Lab",
+            "Scienze Motorie",
+            "Scienze Motorie",
+            "Lettere",
+            "Lettere"
+        ],
+        "venerdi.html": [
+            "Lettere",
+            "TPSI",
+            "Informatica - Lab",
+            "Sistemi e reti",
+            "Inglese",
+            "GPOI"
+        ]
+    };
+
+    const teachers = {
+        "TPSI" : "Cr.",
+        "TPSI - Lab" : "Cr. - Bi.",
+
+        "Sistemi e reti - Lab": "Bo. - Mar.",
+        "Sistemi e reti": "Bo.",
+
+        "Inglese": "Mal.",
+        "Lettere" : "Pr.",
+        "Matematica" : "Sp.",
+
+        "GPOI" : "Sch.",
+        "GPOI - Lab" : "Sch. - Mar.",
+
+        "Informatica" : "Mu.",
+        "Informatica - Lab" : "Mu. - Bi."
+    };
+
+    // ORARI SPECIALI
+    const ore = {
+        "mercoledi.html" : {
+            "minutoInizio" : ["00","50","45","40","45","30","20"],
+            "minutoFine"   : ["50","35","40","35","30","20","10"]
+        },
+        "giovedi.html" : {
+            "minutoInizio" : ["00","50","45","40","45","30","20"],
+            "minutoFine"   : ["50","35","40","35","30","20","10"]
+        }
+    };
+
+    const correntFile = window.location.pathname.split("/").pop();
     const orarioGroup = document.querySelector(".orario-group");
 
-    function trovaProf(materiaCompleta) {
-        const keys = Object.keys(teachers).sort((a, b) => b.length - a.length);
-        for (const key of keys) {
-            if (materiaCompleta.includes(key)) {
-                return teachers[key];
-            }
-        }
-        return "";
-    }
+    let ora = 8;
 
     for (let index = 0; index < orari[correntFile].length; index++) {
 
         const materiaCompleta = orari[correntFile][index];
-        let prof;
+        const prof = teachers[materiaCompleta];
 
-        if (correntFile === "lunedi.html" && index === 0) {
-            prof = "Pr.";
-        } else {
-            prof = trovaProf(materiaCompleta);
+        let minutiInizio = "00";
+        let minutiFine = "00";
+        let addHour = 1;
+        let addHourSp;
+
+
+        if (correntFile === "mercoledi.html" || correntFile === "giovedi.html") {
+            minutiInizio = ore[correntFile]["minutoInizio"][index];
+            minutiFine   = ore[correntFile]["minutoFine"][index];
+            if (index === 1) {
+                addHour = 1;
+                ora--;
+            }
+        }
+        else {
+            if (index === 1 || index === 3) {
+                minutiFine = "55";
+                addHour = 0;
+            }
+            else if (index === 2 || index === 4) {
+                minutiInizio = "05";
+            }
         }
 
         orarioGroup.innerHTML += `
             <div class="ora">
                 <div class="oraLezione">${index + 1}</div>
-                <div class="lezione">${materiaCompleta} (${prof})</div>
+                <div class="lezione">${ora}:${minutiInizio} - ${ora + addHour}:${minutiFine} ${materiaCompleta} (${prof})</div>
             </div>
         `;
+
+        ora++;
     }
 
 });
