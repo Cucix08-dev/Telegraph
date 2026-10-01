@@ -16,6 +16,10 @@
     margin-bottom: 20px;
 }
 
+.ora > * + *{
+    margin-left: 20px;
+}
+
 .orario-group{
     display: flex;
     flex-direction: column;
@@ -27,6 +31,7 @@
     max-width: 80px;
     min-width: 40px;
     width: 10vw;
+    height: 10vw;
     aspect-ratio: 1/1;
     border-radius: 999px;
     display: flex;
@@ -41,9 +46,8 @@ div#navigation-arrows{
 }
 
 div#navigation-arrows button{
-    width: 20vw;
-    min-width: 110px;
-    max-width: 200px;
+    width: clamp(110px, 20vw, 200px);
+    height: calc(20vw * 0.6);
     aspect-ratio: 5/3;
     transition: transform ease 0.3s;
 }
