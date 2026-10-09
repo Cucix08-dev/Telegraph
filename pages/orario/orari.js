@@ -60,7 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "GPOI - Lab" : "Sch. - Mar.",
 
         "Informatica" : "Mu.",
-        "Informatica - Lab" : "Mu. - Bi."
+        "Informatica - Lab" : "Mu. - Bi.",
+
+        "Religione" : "Sch.",
+        "Scienze Motorie" : "Gan."
     };
 
     // ORARI SPECIALI
@@ -88,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let minutiInizio = "00";
         let minutiFine = "00";
         let addHour = 1;
-        let addHourSp;
 
 
         if (correntFile === "mercoledi.html" || correntFile === "giovedi.html") {
