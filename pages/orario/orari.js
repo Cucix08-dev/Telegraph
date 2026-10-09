@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
         orarioGroup.innerHTML += `
             <div class="ora">
                 <div class="oraLezione">${index + 1}</div>
-                <div class="lezione">${ora}:${minutiInizio} - ${ora + addHour}:${minutiFine} ${materiaCompleta} (${prof})</div>
+                <div class="lezione">${ora}:${minutiInizio} - ${((correntFile === "mercoledi.html" || correntFile === "giovedi.html") && index === 0)? 8:ora + addHour}:${minutiFine} ${materiaCompleta} (${prof})</div>
             </div>
         `;
 
