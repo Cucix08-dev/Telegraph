@@ -2,46 +2,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const orari = {
         "lunedi.html": [
-            "Informatica",
-            "Informatica",
-            "TPSI - Lab",
+            "Religione",
             "Lettere",
-            "Inglese",
-            "GPOI"
-        ],
-        "martedi.html": [
-            "Sistemi e reti - Lab",
-            "Sistemi e reti - Lab",
-            "TPSI - Lab",
-            "TPSI - Lab",
-            "Matematica",
-            "Matematica"
-        ],
-        "mercoledi.html": [
-            "Matematica",
-            "Informatica - Lab",
-            "Lettere",
-            "Lettere",
-            "Inglese",
-            "Sistemi e reti",
-            "Religione"
-        ],
-        "giovedi.html": [
-            "Informatica - Lab",
-            "Informatica - Lab",
-            "GPOI - Lab",
-            "Scienze Motorie",
-            "Scienze Motorie",
-            "Lettere",
-            "Lettere"
-        ],
-        "venerdi.html": [
             "Lettere",
             "TPSI",
-            "Informatica - Lab",
-            "Sistemi e reti",
             "Inglese",
-            "GPOI"
+            "Informatica - Lab"
+        ],
+
+        "martedi.html": [
+            "TPSI - Lab",
+            "TPSI - Lab",
+            "Inglese",
+            "GPOI",
+            "Sistemi e reti - Lab",
+            "Sistemi e reti - Lab"
+        ],
+
+        "mercoledi.html": [
+            "Informatica - Lab",
+            "Informatica - Lab",
+            "Matematica",
+            "Lettere",
+            "Sistemi e reti",
+            "Scienze Motorie",
+            "Scienze Motorie"
+        ],
+
+        "giovedi.html": [
+            "Informatica",
+            "Informatica",
+            "Lettere",
+            "Matematica",
+            "Matematica",
+            "Sistemi e reti",
+            "GPOI - Lab"
+        ],
+
+        "venerdi.html": [
+            "TPSI - Lab",
+            "GPOI",
+            "Inglese",
+            "Informatica - Lab",
+            "Lettere",
+            "Lettere"
         ]
     };
 

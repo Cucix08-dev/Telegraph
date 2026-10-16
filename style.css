@@ -8,12 +8,28 @@
     src: url("fonts/Firma.otf");
 }
 
+html {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+}
+
 body{
     padding: 0;
     margin: 0;
     width: 100vw;
     font-family: 'School Font';
     overflow-x: hidden;
+}
+
+/* CANVAS-BACKGROUND */
+canvas#background-canvas {
+    position: absolute;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    z-index: 150;
 }
 
 /* HEADER */
@@ -30,7 +46,7 @@ header{
     height: 10vh;
     padding: 16px 0;
     top: 0;
-    z-index: 99;
+    z-index: 1000;
 }
 
 #title-page{
@@ -133,6 +149,7 @@ button{
     font-size: clamp(1rem,2vw,1.5rem);
     transition: transform ease 0.25s, filter ease 0.25s;
     font-family: inherit;
+    z-index: 200 !important;
 }
 
 button.project-buttons{
