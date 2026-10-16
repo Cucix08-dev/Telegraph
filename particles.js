@@ -1,13 +1,26 @@
 const canvas = document.getElementById("background-canvas");
-
-canvas.style.marginTop = -48 + "px";
-
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
 canvas.height = document.documentElement.scrollHeight;
 
 const particles = [];
+
+let particleColor = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "rgba(255,255,255,0.7)"
+    : "rgba(0,0,0,0.7)";
+
+window.matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", e => {
+        particleColor = e.matches
+            ? "rgba(255,255,255,0.7)"
+            : "rgba(0,0,0,0.7)";
+    });
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = document.documentElement.scrollHeight;
+});
 
 class Particle {
     constructor() {
@@ -16,6 +29,7 @@ class Particle {
 
         this.radius = Math.random() * 2 + 1;
 
+        // velocità molto lenta
         this.vx = (Math.random() - 0.5) * 0.35;
         this.vy = (Math.random() - 0.5) * 0.35;
     }
@@ -34,7 +48,7 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(255,255,255,0.7)";
+        ctx.fillStyle = particleColor;
         ctx.fill();
     }
 }
