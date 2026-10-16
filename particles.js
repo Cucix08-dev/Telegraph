@@ -29,7 +29,6 @@ class Particle {
 
         this.radius = Math.random() * 2 + 1;
 
-        // velocità molto lenta
         this.vx = (Math.random() - 0.5) * 0.35;
         this.vy = (Math.random() - 0.5) * 0.35;
     }
@@ -46,10 +45,46 @@ class Particle {
     }
 
     draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = particleColor;
-        ctx.fill();
+        const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (isDarkMode) {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = particleColor;
+            ctx.fill();
+        } else {
+            const spikes = 5;
+            const outerRadius = this.radius * 2.5;
+            const innerRadius = this.radius * 1.5;
+
+            let rot = Math.PI / 2 * 3;
+            let x = this.x;
+            let y = this.y;
+            let step = Math.PI / spikes;
+
+            ctx.beginPath();
+            ctx.moveTo(x, y - outerRadius);
+
+            for(let i = 0; i < spikes; i++) {
+                ctx.lineTo(
+                    x + Math.cos(rot) * outerRadius,
+                    y + Math.sin(rot) * outerRadius
+                );
+
+                rot += step;
+
+                ctx.lineTo(
+                    x + Math.cos(rot) * innerRadius,
+                    y + Math.sin(rot) * innerRadius
+                );
+
+                rot += step;
+            }
+
+            ctx.closePath();
+            ctx.fillStyle = particleColor;
+            ctx.fill();
+        }
     }
 }
 
